@@ -1,5 +1,5 @@
 //Copyright 2021 Glowstik Inc. All rights reserved.
-import React, {useEffect} from 'react'
+import {useEffect} from 'react'
 import globalStyles from './GlobalResources/Theme/globalStyles'
 import { useDispatch,} from 'react-redux'
 import {getDimensions} from './GlobalResources/Redux/Slices/dimensionsSlice'
