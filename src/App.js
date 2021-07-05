@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+//Copyright 2021 Glowstik Inc. All rights reserved.
+import React, {useEffect} from 'react'
+import globalStyles from './GlobalResources/Theme/globalStyles'
+import { useDispatch,} from 'react-redux'
+import {getDimensions} from './GlobalResources/Redux/Slices/dimensionsSlice'
+import debounce from './GlobalResources/Functions/Debounce.js'
+import iNoBounce from 'inobounce'
+import {withStyles} from "@material-ui/core"
 
 function App() {
+  iNoBounce.enable()
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    const debouncedHandleResize = debounce(() => {
+        dispatch(getDimensions())
+    }, 100, [])
+    window.addEventListener('resize', debouncedHandleResize)
+    return () => {
+        window.removeEventListener('resize', debouncedHandleResize)
+    }
+  }, [dispatch])
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    //Component goes here
+    null
+  )
 }
 
-export default App;
+export default withStyles(globalStyles)(App)
