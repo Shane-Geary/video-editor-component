@@ -78,8 +78,11 @@ const globalStyles = () => ({
   },
   '@font-face': [
     Fonts.OpenSansLight,
-    Fonts.OpenSansRegular,
+    Fonts.OpenSans,
     Fonts.OpenSansBold,
+    Fonts.AvertaBold,
+    Fonts.AvertaSemiBold,
+    Fonts.Averta,
   ],
 })
 

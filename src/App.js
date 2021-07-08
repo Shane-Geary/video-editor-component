@@ -1,7 +1,7 @@
 //Copyright 2021 Glowstik Inc. All rights reserved.
 import {useEffect} from 'react'
 import globalStyles from './GlobalResources/Theme/globalStyles'
-import { useDispatch,} from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import {getDimensions} from './GlobalResources/Redux/Slices/dimensionsSlice'
 import debounce from './GlobalResources/Functions/Debounce.js'
 import iNoBounce from 'inobounce'
@@ -20,10 +20,17 @@ function App() {
         window.removeEventListener('resize', debouncedHandleResize)
     }
   }, [dispatch])
+  const dynamicHeight = useSelector(state => state.dimensions.height)
+  const dynamicWidth = useSelector(state => state.dimensions.width)
 
   return (
-    //Component goes here
-    null
+    <div style={{
+      height: dynamicHeight,
+      width: dynamicWidth,
+      overflow: 'hidden',
+    }}>
+      {/* Component goes here */}
+    </div>
   )
 }
 
