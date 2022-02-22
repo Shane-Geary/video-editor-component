@@ -5,17 +5,26 @@ import './index.css'
 import App from './App'
 import * as serviceWorkerRegistration from './serviceWorkerRegistration'
 import reportWebVitals from './reportWebVitals'
-import { ThemeProvider} from '@material-ui/core'
+import { ThemeProvider} from '@mui/material';
+import {CacheProvider} from '@emotion/react'
+import createCache from '@emotion/cache'
 import theme from './GlobalResources/Theme/theme'
 import store from './GlobalResources/Redux/store'
 import { Provider } from 'react-redux'
 
+export const muiCache = createCache({
+	'key': 'mui',
+	'prepend': true
+})
+
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <ThemeProvider theme = {theme}>
-        <App />
-      </ThemeProvider>
+      <CacheProvider value={muiCache}>
+        <ThemeProvider theme = {theme}>
+          <App />
+        </ThemeProvider>
+      </CacheProvider>
     </Provider>
   </React.StrictMode>,
   document.getElementById('root')

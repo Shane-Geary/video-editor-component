@@ -1,7 +1,7 @@
 // Copyright 2021 Glowstik Inc. All rights reserved.
 //TODO: remove eslint-disable line below
 /* eslint-disable */
-import { makeStyles } from "@material-ui/styles"
+import { makeStyles } from 'tss-react/mui'
 import { useSelector } from 'react-redux'
 import breakpoints from '../GlobalResources/Theme/breakpoints'
 
@@ -9,7 +9,7 @@ import breakpoints from '../GlobalResources/Theme/breakpoints'
 const ComponentTemplate = () => {
   const dynamicHeight = useSelector(state => state.dimensions.height)
   const dynamicWidth = useSelector(state => state.dimensions.width)
-  const classes = useStyles(
+  const {classes} = useStyles(
     //TODO: JSS props go in this object:
     {}
   )
@@ -20,20 +20,15 @@ const ComponentTemplate = () => {
   )
 }
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles()((theme, props) => ({
   /* 
   -Syntax for breakpoints:
   [breakpoints.direction('breakpointName')]: {
     (List of attributes)
   }
-  -When using props, pass in props after the colon of the className and return the content:
-  className: props => {
-    return {
-      (List of attributes)
-    }
-  }
+  -When using props, reference props arguement of this function
   */
-  //TODO: Insert JSS here:
+  //TODO: Insert TSS here:
     
 }))
 
