@@ -3,6 +3,8 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
 import App from './App'
+import globalStyles from './GlobalResources/Theme/globalStyles'
+import {GlobalStyles} from 'tss-react'
 import * as serviceWorkerRegistration from './serviceWorkerRegistration'
 import reportWebVitals from './reportWebVitals'
 import { ThemeProvider} from '@mui/material';
@@ -18,16 +20,17 @@ export const muiCache = createCache({
 })
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Provider store={store}>
-      <CacheProvider value={muiCache}>
-        <ThemeProvider theme = {theme}>
-          <App />
-        </ThemeProvider>
-      </CacheProvider>
-    </Provider>
-  </React.StrictMode>,
-  document.getElementById('root')
+	<React.StrictMode>
+		<Provider store={store}>
+			<CacheProvider value={muiCache}>
+				<ThemeProvider theme = {theme}>
+			<GlobalStyles styles={globalStyles}/>
+					<App />
+				</ThemeProvider>
+			</CacheProvider>
+		</Provider>
+	</React.StrictMode>,
+	document.getElementById('root')
 )
 
 // If you want your app to work offline and load faster, you can change

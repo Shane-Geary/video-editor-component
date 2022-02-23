@@ -1303,7 +1303,7 @@ const countryCodes = [
 		"minlen": 9,
 		"maxlen": 9
 	},
-    {
+		{
 		"country": "St. Kitts & Nevis",
 		"iso2": "KN",
 		"prefix": 1,

@@ -6,9 +6,9 @@ import typography from './typography'
 import overrides from './overrides'
 
 const theme = createTheme({
-  overrides,
-  palette,
-  typography,
+	overrides,
+	palette,
+	typography,
 })
 
 export default responsiveFontSizes(theme)
