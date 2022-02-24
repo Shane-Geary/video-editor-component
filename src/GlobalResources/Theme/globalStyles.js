@@ -1,21 +1,15 @@
 //Copyright 2021 Glowstik Inc. All rights reserved.
-import Fonts from '../Assets/Fonts/Fonts'
-import fontFamilyOpenSans from './typography'
-import colors from './palette'
-import breakpoints from './breakpoints'
 import theme from './theme'
+
 
 const globalStyles = {
 	body: {
-		...fontFamilyOpenSans,
-		overscrollBehaviorY: 'none'
+		fontFamily: 'OpenSans',
+		overscrollBehaviorY: 'none',
+		margin: 0
 	},
-	a: {
-		color: colors.brandPink,
-	},
-	input: {
-		...fontFamilyOpenSans,
-	},
+	a: {color: theme.pallete.brandPink},
+	input: {fontFamily: 'OpenSans'},
 	'.activeInputOutline': {
 		outline: 'none',
 		borderStyle: 'solid',
@@ -29,7 +23,7 @@ const globalStyles = {
 		justifyContent: 'center'
 	},
 	'.gridWrapperFooters': {
-		height: "100%",
+		height: '100%',
 		display: 'flex',
 		flexDirection: 'column',
 		justifyContent: 'space-between',
@@ -44,14 +38,12 @@ const globalStyles = {
 		gridTemplateColumns: '1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr',
 		gridRowGap: 24,
 		gridColumnGap: 24,
-		[breakpoints.down('tablet')]: {
-		gridColumnGap: 16,
-		gridRowGap: 16,
-		gridTemplateColumns: '1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr',
+		[theme.breakpoints.down('tablet')]: {
+			gridColumnGap: 16,
+			gridRowGap: 16,
+			gridTemplateColumns: '1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr',
 		},
-		[breakpoints.down('landscape')]: {
-		gridTemplateColumns: '1fr 1fr 1fr 1fr',
-		},
+		[theme.breakpoints.down('mobile')]: {gridTemplateColumns: '1fr 1fr 1fr 1fr'},
 	},
 	'.headingText': {
 		display: 'inline-block',
@@ -59,12 +51,8 @@ const globalStyles = {
 		lineHeight: '1.2em',
 		textAlign: 'center',
 		letterSpacing: 0,
-		[breakpoints.down('tablet')]: {
-		fontSize: 32,
-		},
-		[breakpoints.down('landscape')]: {
-		fontSize: 30,
-		},
+		[theme.breakpoints.down('tablet')]: {fontSize: 32},
+		[theme.breakpoints.down('mobile')]: {fontSize: 30},
 	},
 	'.subContentText': {
 		width: '15em',
@@ -73,15 +61,7 @@ const globalStyles = {
 		fontSize: 12,
 		textAlign: 'center',
 		marginBottom: 16,
-	},
-	'@font-face': [
-		Fonts.OpenSansLight,
-		Fonts.OpenSans,
-		Fonts.OpenSansBold,
-		Fonts.AvertaBold,
-		Fonts.AvertaSemiBold,
-		Fonts.Averta,
-	],
+	}
 }
 
 export default globalStyles

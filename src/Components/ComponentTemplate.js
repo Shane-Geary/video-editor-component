@@ -3,6 +3,7 @@
 /* eslint-disable */
 import { makeStyles } from 'tss-react/mui'
 import { useSelector } from 'react-redux'
+// import theme from '../GlobalResources/Theme/theme'
 
 
 const ComponentTemplate = () => {
@@ -22,7 +23,7 @@ const ComponentTemplate = () => {
 const useStyles = makeStyles()((theme, props) => ({
 	/* 
 	-Syntax for breakpoints:
-	[breakpoints.direction('breakpointName')]: {
+	[theme.breakpoints.direction('breakpointName')]: {
 		(List of attributes)
 	}
 	-When using props, reference props arguement of this function

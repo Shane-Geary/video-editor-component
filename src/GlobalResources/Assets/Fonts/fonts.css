@@ -1,0 +1,56 @@
+@font-face {
+	font-family: Averta;
+	font-style: normal;
+	font-weight: 100 499;
+	font-display: swap;
+	src: url("./Averta.woff2") format("woff2")
+}
+@font-face {
+	font-family: Averta;
+	font-style: normal;
+	font-weight: 500 699;
+	font-display: swap;
+	src: url("./AvertaSemiBold.woff2") format("woff2")
+}
+@font-face {
+	font-family: Averta;
+	font-style: normal;
+	font-weight: 700 1000;
+	font-display: swap;
+	src: url("./AvertaBold.woff2") format("woff2")
+}
+@font-face {
+	font-family: OpenSans;
+	font-style: normal;
+	font-weight: 1 399;
+	font-display: swap;
+	src: url("./OpenSansLight.woff2") format("woff2")
+}
+@font-face {
+	font-family: OpenSans;
+	font-style: normal;
+	font-weight: 400 699;
+	font-display: swap;
+	src: url("./OpenSans.woff2") format("woff2")
+}
+@font-face {
+	font-family: OpenSans;
+	font-style: normal;
+	font-weight: 700 1000;
+	font-display: swap;
+	src: url("./OpenSansBold.woff2") format("woff2")
+}
+@font-face {
+	font-family: Rubik;
+	font-style: normal;
+	font-weight: 1 499;
+	font-display: swap;
+	src: url("./RubikRegular.woff2") format("woff2")
+}
+@font-face {
+	font-family: Rubik;
+	font-style: normal;
+	font-weight: 500 699;
+	font-display: swap;
+	src: url("./RubikMedium.woff2") format("woff2")
+}

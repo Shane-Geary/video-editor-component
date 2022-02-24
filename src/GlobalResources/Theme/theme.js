@@ -1,14 +1,12 @@
 //Copyright 2021 Glowstik Inc. All rights reserved.
-import {createTheme, responsiveFontSizes} from '@mui/material';
-import breakpoints from './breakpoints'
 import palette from './palette'
-import typography from './typography'
 import overrides from './overrides'
+import breakpoints from './breakpoints'
 
-const theme = createTheme({
+const theme = {
+	breakpoints,
 	overrides,
-	palette,
-	typography,
-})
+	palette
+}
 
-export default responsiveFontSizes(theme)
+export default theme
