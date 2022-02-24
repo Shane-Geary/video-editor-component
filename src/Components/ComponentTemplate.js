@@ -1,16 +1,17 @@
-// Copyright 2021 Glowstik Inc. All rights reserved.
-//TODO: remove eslint-disable line below
+// Copyright 2021 Glowstik Inc. All rights reserved!
+//TODO: remove eslint-disable line below.
 /* eslint-disable */
 import { makeStyles } from 'tss-react/mui'
 import { useSelector } from 'react-redux'
 // import theme from '../GlobalResources/Theme/theme'
 
 
+
 const ComponentTemplate = () => {
 	const dynamicHeight = useSelector(state => state.dimensions.height)
 	const dynamicWidth = useSelector(state => state.dimensions.width)
 	const {classes} = useStyles(
-		//TODO: JSS props go in this object:
+		//TODO: TSS props go in this object:
 		{}
 	)
 
@@ -20,7 +21,7 @@ const ComponentTemplate = () => {
 	)
 }
 
-const useStyles = makeStyles()((theme, props) => ({
+const useStyles = makeStyles()((_, props) => ({
 	/* 
 	-Syntax for breakpoints:
 	[theme.breakpoints.direction('breakpointName')]: {
