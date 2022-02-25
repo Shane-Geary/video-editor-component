@@ -8,7 +8,7 @@ const globalStyles = {
 		overscrollBehaviorY: 'none',
 		margin: 0
 	},
-	a: {color: theme.pallete.brandPink},
+	a: {color: theme.palette.brandPink},
 	input: {fontFamily: 'OpenSans'},
 	'.activeInputOutline': {
 		outline: 'none',
