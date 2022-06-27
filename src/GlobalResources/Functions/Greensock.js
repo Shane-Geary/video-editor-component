@@ -1,14 +1,14 @@
 //Copyright 2021 Glowstik Inc. All rights reserved.
 /* eslint-disable import/prefer-default-export */
-import { gsap, Back } from 'gsap'
+import {gsap, Back} from 'gsap'
 
 //Jiggle input given it's Ref
-export const jiggleInput = ({ current }) => {
-	gsap.timeline({ paused: false, repeat: 4 })
-		.to(current, { x: '10' })
-		.to(current, { x: '0' })
-		.to(current, { x: '-10' })
-		.to(current, { x: '0' })
+export const jiggleInput = ({current}) => {
+	gsap.timeline({paused: false, repeat: 4})
+		.to(current, {x: '10'})
+		.to(current, {x: '0'})
+		.to(current, {x: '-10'})
+		.to(current, {x: '0'})
 		.duration(0.1)
 		.play()
 }
@@ -17,9 +17,7 @@ export const jiggleInput = ({ current }) => {
 export const slideIn = (duration, {current}) => {
 	gsap.fromTo(
 		current,
-		{
-			x: window.innerWidth
-		},
+		{x: window.innerWidth},
 		{
 			x: 0,
 			duration,
@@ -32,9 +30,7 @@ export const slideIn = (duration, {current}) => {
 export const fadeIn = (delay, duration, {current}) => {
 	gsap.fromTo(
 		current,
-		{
-			opacity: 0
-		},
+		{opacity: 0},
 		{
 			opacity: 1,
 			delay,

@@ -1,5 +1,5 @@
 // Copyright 2021 Glowstik Inc. All rights reserved.
-import { createSlice } from '@reduxjs/toolkit'
+import {createSlice} from '@reduxjs/toolkit'
 
 export const dimensionsSlice = createSlice({
 	name: 'dimensions',
@@ -20,6 +20,6 @@ export const dimensionsSlice = createSlice({
 })
 
 // Action creators are generated for each case reducer function
-export const { getDimensions } = dimensionsSlice.actions
+export const {getDimensions} = dimensionsSlice.actions
 
 export default dimensionsSlice.reducer

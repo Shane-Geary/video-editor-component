@@ -8,7 +8,7 @@ const pickImage = async () => {
 		aspect: [4, 3],
 		quality: 1,
 	})
-	if (!result.cancelled) {
+	if(!result.cancelled) {
 		return result
 	}
 	throw new Error('cancelled')

@@ -1,5 +1,4 @@
 //Copyright 2021 Glowstik Inc. All rights reserved.
 
-const overrides = {
-}
+const overrides = {}
 export default overrides

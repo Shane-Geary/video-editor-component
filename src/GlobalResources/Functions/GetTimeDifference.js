@@ -13,16 +13,16 @@ const getTimeDifference = (createdOn) => {
 	const min = Math.floor(timeDifference / 60000)
 	const hour = Math.floor(timeDifference / 3600000)
 	const day = Math.floor(timeDifference / 86400000)
-	if (sec >= 60) {
-		if (min < 60) {
+	if(sec >= 60) {
+		if(min < 60) {
 			return `${min}m`
 		}
-		if (hour < 24) {
+		if(hour < 24) {
 			return `${hour}h`
 		}
 		return `${day}d`
 	}
-	if (sec < 10) {
+	if(sec < 10) {
 		return 'now'
 	}
 	return `${sec}s`
