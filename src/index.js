@@ -1,16 +1,11 @@
 //Copyright 2021 Glowstik Inc. All rights reserved.
-import './GlobalResources/Assets/Fonts/fonts.css'
 import React from 'react'
 import ReactDOM from 'react-dom'
 import App from './App'
 import * as serviceWorkerRegistration from './serviceWorkerRegistration'
 import reportWebVitals from './reportWebVitals'
 import {CacheProvider} from '@emotion/react'
-import {GlobalStyles} from 'tss-react'
-import globalStyles from './GlobalResources/Theme/globalStyles'
 import createCache from '@emotion/cache'
-import store from './GlobalResources/Redux/store'
-import {Provider} from 'react-redux'
 
 export const muiCache = createCache({
 	'key': 'mui',
@@ -19,12 +14,12 @@ export const muiCache = createCache({
 
 ReactDOM.render(
 	<React.StrictMode>
-		<Provider store={store}>
-			<CacheProvider value={muiCache}>
-				<GlobalStyles styles={globalStyles}/>
-				<App />
-			</CacheProvider>
-		</Provider>
+		{/* <Provider store={store}> */}
+		<CacheProvider value={muiCache}>
+			{/* <GlobalStyles styles={globalStyles}/> */}
+			<App />
+		</CacheProvider>
+		{/* </Provider> */}
 	</React.StrictMode>,
 	document.getElementById('root')
 )
