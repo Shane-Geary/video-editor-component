@@ -5,12 +5,6 @@ import {FontAwesomeIcon} from '@fortawesome/react-fontawesome' // https://fontaw
 import {faVolumeMute, faVolumeUp, faPause, faPlay, faGripLinesVertical, faSync, faStepBackward, faStepForward, faCamera, faDownload, faEraser} from '@fortawesome/free-solid-svg-icons' // https://fontawesome.com/v5/docs/web/use-with/react
 
 
-// import Lottie from 'react-lottie-player'
-import lottie from 'lottie-web'
-// import loaderAnimation from '../Lotties/99680-3-dots-loading.json'
-// import loadingSpinner from '../Lotties/LoadingSpinner.json'
-import ED2290Spinner from '../Lotties/ED2290Spinner.json'
-
 import {createFFmpeg, fetchFile} from '@ffmpeg/ffmpeg' // https://github.com/ffmpegwasm/ffmpeg.wasm/blob/master/docs/api.md
 // import ffmpegOnProgress from 'ffmpeg-on-progress'
 import ProgressBar from 'progress-bar-react-ui'
@@ -498,20 +492,6 @@ function Editor({videoUrl, timings, setTimings}) {
 		playBackBarRef.current.style.background = `linear-gradient(to right${colors})`
 	}
 
-
-	//Handling logic for lottie animations through react-lottie-player library
-	useEffect(() => {
-		lottie.loadAnimation({
-			container: lottieRef.current,
-			// animationData: loadingSpinner,
-			animationData: ED2290Spinner,
-			autoplay: true,
-			// loop: false
-		})
-		return () => {
-			lottie.destroy()
-		}
-	})
 
 	return (
 		<div className='wrapper'>
