@@ -1,3 +1,4 @@
+//Copyright 2022 Glowstik Inc. All rights reserved.
 // /* eslint-disable func-names */
 import {useState, useRef, useEffect} from 'react'
 import '../editor.css'
@@ -144,101 +145,6 @@ function Editor({videoUrl, timings, setTimings}) {
 			console.log(error)
 		}
 	}
-
-	//Grayscale filter from ffmpeg to be applied to videos
-	// const grayscaleFilter = async () => {
-	// 	try{
-	// 		//Disabling new-cap for FS function
-	// 		// eslint-disable-next-line new-cap
-	// 		ffmpeg.current.FS('writeFile', 'myFile.mp4', await fetchFile(videoUrl))
-	// 		console.time()
-
-	// 		ffmpeg.current.setProgress(({ratio}) => {
-	// 			console.log('ffmpeg progress: ', ratio)
-	// 			if(ratio < 0) {
-	// 				setProgress(0)
-	// 			}
-	// 			setProgress(Math.round(ratio * 100))
-	// 		})
-
-	// 		await ffmpeg.current.run('-i', 'myFile.mp4', '-vf', 'hue=s=0', '-c:a', 'copy', 'output.mp4')
-
-	// 		//Disabling new-cap for FS function
-	// 		// eslint-disable-next-line new-cap
-	// 		const data = ffmpeg.current.FS('readFile', 'output.mp4')
-
-	// 		const url = URL.createObjectURL(new Blob([data.buffer], {type: 'video/mp4'}))
-	// 		setTrimmedVideo(url)
-	// 		setTrimmingDone(true)
-	// 		setLottiePlaying(false)
-	// 	}
-	// 	catch(error) {
-	// 		console.log(error)
-	// 	}
-	// }
-
-	//Saturation filter from ffmpeg to be applied to videos
-	// const saturationFilter = async () => {
-	// 	try{
-	// 		//Disabling new-cap for FS function
-	// 		// eslint-disable-next-line new-cap
-	// 		ffmpeg.current.FS('writeFile', 'myFile.mp4', await fetchFile(videoUrl))
-
-	// 		ffmpeg.current.setProgress(({ratio}) => {
-	// 			console.log('ffmpeg progress: ', ratio)
-	// 			if(ratio < 0) {
-	// 				setProgress(0)
-	// 			}
-	// 			setProgress(Math.round(ratio * 100))
-	// 		})
-
-	// 		await ffmpeg.current.run('-i', 'myFile.mp4', '-vf', 'eq=brightness=0.1:saturation=5.0', '-c:a', 'copy', 'output.mp4')
-
-	// 		//Disabling new-cap for FS function
-	// 		// eslint-disable-next-line new-cap
-	// 		const data = ffmpeg.current.FS('readFile', 'output.mp4')
-
-	// 		const url = URL.createObjectURL(new Blob([data.buffer], {type: 'video/mp4'}))
-	// 		setTrimmedVideo(url)
-	// 		setTrimmingDone(true)
-	// 		setLottiePlaying(false)
-	// 	}
-	// 	catch(error) {
-	// 		console.log(error)
-	// 	}
-	// }
-
-	//Blur filter from ffmpeg to be applied to videos
-	// const blurFilter = async () => {
-	// 	try{
-	// 		//Disabling new-cap for FS function
-	// 		// eslint-disable-next-line new-cap
-	// 		ffmpeg.current.FS('writeFile', 'myFile.mp4', await fetchFile(videoUrl))
-
-	// 		ffmpeg.current.setProgress(({ratio}) => {
-	// 			console.log('ffmpeg progress: ', ratio)
-	// 			if(ratio < 0) {
-	// 				setProgress(0)
-	// 			}
-	// 			setProgress(Math.round(ratio * 100))
-	// 		})
-
-	// 		await ffmpeg.current.run('-i', 'myFile.mp4', '-vf', 'boxblur=10', '-c:a', 'copy', 'output.mp4')
-
-	// 		//Disabling new-cap for FS function
-	// 		// eslint-disable-next-line new-cap
-	// 		const data = ffmpeg.current.FS('readFile', 'output.mp4')
-
-	// 		const url = URL.createObjectURL(new Blob([data.buffer], {type: 'video/mp4'}))
-	// 		setTrimmedVideo(url)
-	// 		setTrimmingDone(true)
-	// 		setLottiePlaying(false)
-	// 	}
-	// 	catch(error) {
-	// 		console.log(error)
-	// 	}
-	// }
-
 
 	//Lifecycle handling the logic needed for the progress bar - displays the blue bar that grows as the video plays
 	// eslint-disable-next-line react-hooks/exhaustive-deps

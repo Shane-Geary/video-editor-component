@@ -1,3 +1,4 @@
+//Copyright 2022 Glowstik Inc. All rights reserved.
 /* eslint-disable func-names */
 import {useState, useEffect} from 'react'
 import '../editor.css'
